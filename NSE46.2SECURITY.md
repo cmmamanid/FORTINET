@@ -39,8 +39,59 @@ Con el siguiente comando, se podrá conocer (via CLI) los puertos asociados a ca
  - Interfaces no poseen direcciones IP
  - Los paquetes no son enrutados, solo reenviados o bloqueados
  
+ ### Configuración predeterminada de Fábrica
  
+ - Port1: 192.168.1.99/24
+ - servicios habilitados PING, HTTP, HTTPS y SSH
+ - DHCP server sobre Port1
+ - Credenciales por defecto:
+  ```
+ user:admin
+ password:enblanco
+  ```
+ - Puedes acceder a Fortigate por CLI
  
+ ### Servicio de suscripción FortiGuard
  
+ - Requiere conexión a internet y un contrato
+ - Provee FDN
+ - Actualización de Paquetes: FortiGuard Antivirus y IPS
  
+ ```
+ update.fortiguard.net
+ TCP port 443(SSL)
+ ```
  
+ - Live queries: FortiGuard Web Filtering, DNS Filtering y Antispam
+ 
+ ```
+ service.fortiguard.net
+ UDP port 53 o 8888
+ 
+ securewf.fortiguard.net
+ HTTPS sobre puerto 53 o 8888
+ ```
+### Métodos de administración:
+
+- CLI (console, SSH, telnet, GUI widget)
+- GUI (FortiExplore, Web Browser [HTTP,HTTPS])
+
+### Comandos Básicos
+
+Muestra el estado actual del fortigate
+```
+get system status
+```
+Muentra todos los valores de los atributos de configuración de una interface
+```
+show full-configuration system interface <port>
+```
+Muestra los valores de configuración de una interface
+```
+show system interface <port>
+```
+
+
+
+
+
