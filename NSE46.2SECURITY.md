@@ -91,7 +91,25 @@ Muestra los valores de configuración de una interface
 show system interface <port>
 ```
 
+### Administrator profiles
 
-fsdffsdfs
+Se puede especificar el nivel de acceso de cada perfil de administrador, configurando cada control de acceso como *read-and-write* o *read-only*. También se puede habilitar la opción de *Override Idle Timeout*, para anular el tiempo de inactividad, esto se recomiendo habilitar solo en perfiles de acceso básico.
+
+### Two-Factor Authentication
+
+Para incrementar la seguridad en el acceso, se puede implementar autenticación usando *two-factor*, password (one factor) + FortiToken (two factor). FortiToken, genera un número aleatorio que se sincroniza con el FortiGate.
+
+https://kb.fortinet.com/kb/documentLink.do?externalID=FD45866
+
+
+
+
+
+
+
+
+
+
+
 
 
